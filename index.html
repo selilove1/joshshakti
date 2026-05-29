@@ -1,276 +1,520 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JoshShakti&#8482; &#8212; Limited Time Offer</title>
+<meta content='width=device-width, initial-scale=1, maximum-scale=5' name='viewport'/>
+<style id='page-skin-1' type='text/css'><!--
+body { margin: 0; padding: 0; background-color: #0b0e14; font-family: 'Inter', sans-serif; color: white; }
 
-<title>Preparing Content...</title>
-
+--></style>
 <style>
+    /*<![CDATA[*/
+    :root { --gold: #f5c542; --red: #ff3e3e; --card-blue: #161b22; }
+    .timer-bar { position: fixed; top: 0; left: 0; width: 100%; background: linear-gradient(90deg, #ff3e3e, #8b0000); color: white; text-align: center; padding: 10px 0; font-size: 14px; font-weight: 800; z-index: 9999; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    #countdown { background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 4px; font-family: monospace; }
+    .sm-wrapper { max-width: 500px; margin: 50px auto 0; padding-bottom: 90px; }
+    .sm-hero { padding: 40px 20px; text-align: center; }
+    .sm-logo { font-size: 24px; font-weight: 900; margin-bottom: 15px; }
+    .sm-logo span { color: var(--gold); }
+    .sm-main-img { width: 100%; border-radius: 15px; margin: 20px 0; border: 1px solid #333; }
+    .sm-offer-card { background: var(--card-blue); border: 2px solid var(--gold); border-radius: 20px; padding: 25px; text-align: center; }
+    .sm-cta { display: block; background: linear-gradient(135deg, #f5c542, #d4a017); color: #000; text-decoration: none; padding: 18px; border-radius: 12px; font-size: 20px; font-weight: 900; margin-top: 15px; text-transform: uppercase; }
+    .sm-sticky-footer { position: fixed; bottom: 0; width: 100%; max-width: 500px; background: #000; padding: 15px 20px; border-top: 1px solid #333; display: flex; align-items: center; justify-content: space-between; z-index: 1000; box-sizing: border-box; }
+    /*]]>*/
+  </style>
+<link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'/>
+<script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#f2f2f2;
-color:#111;
-}
-
-.top-loader{
-position:sticky;
-top:0;
-z-index:999;
-background:#111;
-padding:18px;
-text-align:center;
-color:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
-}
-
-.top-title{
-font-size:20px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.top-sub{
-font-size:14px;
-opacity:0.8;
-margin-bottom:12px;
-}
-
-.timer{
-font-size:48px;
-font-weight:bold;
-margin-bottom:12px;
-animation:pulse 1s infinite;
-}
-
-.progress-wrap{
-width:100%;
-height:10px;
-background:#333;
-border-radius:30px;
-overflow:hidden;
-}
-
-.progress{
-height:100%;
-width:0%;
-background:linear-gradient(90deg,#00ff99,#00ccff);
-transition:1s linear;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
-}
-
-.container{
-max-width:760px;
-margin:auto;
-padding:20px;
-}
-
-.article{
-background:white;
-padding:25px;
-border-radius:20px;
-margin-top:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.hero-img{
-width:100%;
-border-radius:18px;
-margin-bottom:20px;
-}
-
-h1{
-font-size:32px;
-line-height:1.3;
-margin-bottom:20px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:18px;
-color:#333;
-}
-
-.comments{
-margin-top:25px;
-}
-
-.comment{
-background:#fafafa;
-padding:15px;
-border-radius:14px;
-margin-bottom:12px;
-border:1px solid #eee;
-}
-
-.name{
-font-weight:bold;
-margin-bottom:5px;
-}
-
-.live-tag{
-display:inline-block;
-background:red;
-color:white;
-padding:5px 12px;
-border-radius:30px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:15px;
-animation:pulse 1s infinite;
-}
-
-@media(max-width:600px){
-
-h1{
-font-size:26px;
-}
-
-p{
-font-size:17px;
-}
-
-.timer{
-font-size:56px;
-}
-
-.top-title{
-font-size:22px;
-}
-
-}
-
-</style>
 </head>
-
 <body>
-
-<div class="top-loader">
-
-<div class="top-title">
-Preparing Full HD Video...
+<div class='timer-bar'>
+    &#9889; OFFER KHATAM HONE MEIN: <span id='header-countdown-sync'>12:00:00</span>
 </div>
-
-<div class="top-sub">
-Please wait while secure access is verified
+<div class='section' id='main'><div class='widget Blog' data-version='2' id='Blog1'>
+<div class='sm-wrapper'>
+<section class='sm-hero'>
+<div class='sm-logo'>Josh<span>Shakti&#8482;</span></div>
+<h1>Rishte Mein Wahi <span style='color: var(--gold);'>Magic</span> & <span style='color: var(--gold);'>Romance</span> Wapas Laayein</h1>
+<img alt='JoshShakti Bundle' class='sm-main-img' decoding='async' fetchpriority='high' loading='eager' src='https://i.postimg.cc/XJ8Q4nDj/Firefly-Gemini-Flash.png' style='display: block; width: 100%; height: auto;'/>
+<div style='padding: 0 20px; margin-top: -10px; margin-bottom: 20px;'>
+<div style='text-align: center; margin-bottom: 15px;'>
+<p style='color: #22c55e; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;'>🚀 5,480+ Confident Men and 12000+ Happy Couples</p>
+<h2 style='color: #fff; font-size: 18px; margin: 5px 0;'>Is E-Book Se Aapko Kya Milega?</h2>
 </div>
-
-<div class="timer" id="timer">
-5
+<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px;'>
+<div style='background: #161b22; padding: 12px; border-radius: 12px; border: 1px solid #333;'>
+<div style='font-size: 20px; margin-bottom: 5px;'>🕒</div>
+<div style='color: var(--gold); font-weight: 800; font-size: 13px;'>3X Stamina</div>
+<p style='color: #888; font-size: 11px; margin: 3px 0 0 0;'>Bina thake lambe samay tak perform karein.</p>
 </div>
-
-<div class="progress-wrap">
-<div class="progress" id="progress"></div>
+<div style='background: #161b22; padding: 12px; border-radius: 12px; border: 1px solid #333;'>
+<div style='font-size: 20px; margin-bottom: 5px;'>🧠</div>
+<div style='color: var(--gold); font-weight: 800; font-size: 13px;'>Zero Anxiety</div>
+<p style='color: #888; font-size: 11px; margin: 3px 0 0 0;'>Darr aur sharam ko jadd se khatam karein.</p>
 </div>
-
+<div style='background: #161b22; padding: 12px; border-radius: 12px; border: 1px solid #333;'>
+<div style='font-size: 20px; margin-bottom: 5px;'>🍎</div>
+<div style='color: var(--gold); font-weight: 800; font-size: 13px;'>Natural Diet</div>
+<p style='color: #888; font-size: 11px; margin: 3px 0 0 0;'>Ghar ki cheezon se stamina badhane ka tarika.</p>
 </div>
-
-<div class="container">
-
-<div class="article">
-
-<div class="live-tag">
-LIVE TRENDING
+<div style='background: #161b22; padding: 12px; border-radius: 12px; border: 1px solid #333;'>
+<div style='font-size: 20px; margin-bottom: 5px;'>🔒</div>
+<div style='color: var(--gold); font-weight: 800; font-size: 13px;'>100% Private</div>
+<p style='color: #888; font-size: 11px; margin: 3px 0 0 0;'>Aapki privacy hamari top priority hai.</p>
 </div>
-
-<img class="hero-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" />
-
-<h1>
-Viral Video Everyone Suddenly Started Talking About
-</h1>
-
-<p>
-Over the last few days, thousands of users across social media platforms have been discussing a newly discovered video that unexpectedly went viral online.
-</p>
-
-<p>
-Several creators claimed the original upload disappeared shortly after gaining massive attention, causing users to search for alternative access links.
-</p>
-
-<p>
-According to online discussions, the full version contains additional information and footage that was not shown publicly in short clips.
-</p>
-
-<p>
-As more users started sharing screenshots and reactions, engagement around the topic increased rapidly across multiple countries.
-</p>
-
-<p>
-A temporary secure mirror page was later created so viewers could continue accessing the content while the original source remained unavailable.
-</p>
-
-<p>
-The complete video is currently loading and will open automatically once verification is complete.
-</p>
-
-<div class="comments">
-
-<div class="comment">
-<div class="name">Michael</div>
-Didn't expect the full video to actually work.
 </div>
-
-<div class="comment">
-<div class="name">Daniel</div>
-The ending was crazy honestly.
 </div>
-
-<div class="comment">
-<div class="name">Chris</div>
-Glad I waited for the complete version.
+<div class='sm-offer-card'>
+<div style='background: rgba(255, 62, 62, 0.1); color: #ff3e3e; display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 800; margin-bottom: 15px; border: 1px solid rgba(255, 62, 62, 0.2);'>
+                🔥 LIMITED TIME OFFER: 90% OFF
+              </div>
+<div style='display: flex; align-items: baseline; justify-content: center; gap: 10px;'>
+<span style='color: #888; text-decoration: line-through; font-size: 22px; font-weight: 500;'>&#8377;2,499</span>
+<span style='color: var(--gold); font-size: 54px; font-weight: 900; letter-spacing: -1px;'><small style='font-size: 24px; vertical-align: super;'>&#8377;</small>299</span>
 </div>
-
+<p style='color: #22c55e; font-size: 14px; font-weight: 700; margin-top: -5px;'>You Are Saving &#8377;2,200 (Special Sale)</p>
+<a class='sm-cta' href='https://payments.cashfree.com/forms/JoshShakti' style='margin-bottom: 10px;'>
+  BUY NOW &#8212; <span style='font-size: 15px;'>आज स&#2375; ह&#2368; अपन&#2368; र&#2366;त&#2375;&#2306; र&#2306;ग&#2368;न बन&#2366;ए&#2306;</span>
+</a>
+<div style='font-size: 10px; color: #888; display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 5px;'>
+<img height='12' src='https://img.icons8.com/material-outlined/24/888888/shield.png' width='12'/>
+<span>UPI, Debit/Credit Cards & NetBanking Accepted</span>
 </div>
-
 </div>
-
+</section>
+<section style='padding: 20px; background: #0b0e14;'>
+<div style='background: #161b22; border: 1.5px solid #333; border-radius: 25px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);'>
+<h3 style='color: #ff4757; font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;'>
+      &#9888;&#65039; Kya Aap Bhi Yeh Face Kar Rahe Hain?
+    </h3>
+<ul style='color: #ccc; font-size: 14px; padding-left: 20px; line-height: 1.8; margin-bottom: 25px;'>
+<li>Performance ke waqt <b>tension aur darr</b> lagna.</li>
+<li>Confidence ki kami aur partner se <b>sharam mehsoos</b> hona.</li>
+<li>Dheere-dheere rishte mein <b>dooriyan aur khamoshi</b> aana.</li>
+<li>Har waqt yahi darr ki "Kya main sahi kar paunga?"</li>
+</ul>
+<div style='border-top: 1px dashed #444; margin-bottom: 25px;'></div>
+<h3 style='color: var(--gold); font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;'>
+      &#9989; JoshSakti E-Book Kaise Help Karegi?
+    </h3>
+<ul style='color: #eee; font-size: 14px; padding-left: 20px; line-height: 1.8;'>
+<li><b>Mindset Reset:</b> Darr aur anxiety ko khatam karne ki secret techniques.</li>
+<li><b>Natural Boosters:</b> Woh foods aur habits jo stamina ko 3X badha dete hain.</li>
+<li><b>Confidence Hacks:</b> Bina kisi dawai ke apna confidence wapas laane ka roadmap.</li>
+<li><b>Spark Recovery:</b> Partner ke saath wahi purani "Aag" aur excitement wapas laane ke tips.</li>
+</ul>
+<div style='margin-top: 25px; background: rgba(245, 197, 66, 0.1); padding: 15px; border-radius: 15px; border-left: 4px solid var(--gold);'>
+<p style='color: var(--gold); font-size: 13px; margin: 0; font-weight: 600;'>
+        "Yeh sirf ek book nahi, aapke mardana confidence ko wapas pane ki chabi hai."
+      </p>
 </div>
-
+</div>
+</section>
+<section style='padding: 20px; background: #0b0e14;'>
+<div style='background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 25px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px;'>
+<div style='width: 110px; height: 110px; border-radius: 50%; border: 3px solid var(--gold); padding: 4px; box-shadow: 0 0 20px rgba(245, 197, 66, 0.2);'>
+<img alt='Coach Sanjana' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbD5ZairNa2MkZoREE0HaT-gLp4WfMZ832pIrL0xfrzhbbYEChwkcJZiuzDGWCO1GauKV9j8G2uHJTjLIlZNaOs2D-GD717bwBTpMHIlCmMRohvaoTl8J6ZOR-D5M-K3Cf34EZ-9AzSYqIIqczE0etQHafhr8U62neCKhZbAGcdA694tQ0skc5eTEjebbL/s1024/Gemini_Generated_Image_p8vcj4p8vcj4p8vc.png' style='width: 100%; height: 100%; border-radius: 50%; object-fit: cover;'/>
+</div>
+<div>
+<h3 style='color: #fff; margin: 0; font-size: 20px; font-weight: 800;'>Miliye Apni Coach <span style='color: var(--gold);'>Sanjana</span> Se</h3>
+<p style='color: var(--gold); font-size: 12px; font-weight: 700; margin: 5px 0 10px 0; text-transform: uppercase; letter-spacing: 1px;'>Relationship & Wellness Expert</p>
+<p style='color: #ccc; font-size: 14px; line-height: 1.6; font-style: italic;'>
+        "Pichle 5 saalon mein maine 10,000+ logon ki madad ki hai unke rishte mein wahi purana 'Magic' aur 'Confidence' wapas laane mein. Mera mission hai ki har mard apni life bina kisi darr ya sharam ke jiye."
+      </p>
+</div>
+<div style='display: flex; gap: 15px; margin-top: 5px;'>
+<div style='text-align: center;'>
+<div style='color: #fff; font-weight: 800; font-size: 16px;'>5+</div>
+<div style='color: #888; font-size: 10px;'>Years Exp.</div>
+</div>
+<div style='border-left: 1px solid #333;'></div>
+<div style='text-align: center;'>
+<div style='color: #fff; font-weight: 800; font-size: 16px;'>10k+</div>
+<div style='color: #888; font-size: 10px;'>Couples Helped</div>
+</div>
+<div style='border-left: 1px solid #333;'></div>
+<div style='text-align: center;'>
+<div style='color: #fff; font-weight: 800; font-size: 16px;'>4.9/5</div>
+<div style='color: #888; font-size: 10px;'>Rating</div>
+</div>
+</div>
+</div>
+</section>
+<section style='padding: 20px;'>
+<div style='background: #161b22; border: 1px solid #333; border-radius: 20px; padding: 20px;'>
+<h3 style='color: var(--gold); font-size: 18px; text-align: center; margin-bottom: 15px;'>Yeh E-Book Kiske Liye Hai?</h3>
+<div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px;'>
+<div style='background: #0b0e14; padding: 10px; border-radius: 10px; font-size: 12px; color: #ccc; border-left: 3px solid var(--gold);'>
+        &#9989; Unke liye jo <b>Confidence</b> kho chuke hain.
+      </div>
+<div style='background: #0b0e14; padding: 10px; border-radius: 10px; font-size: 12px; color: #ccc; border-left: 3px solid var(--gold);'>
+        &#9989; Jo <b>Natural</b> tarike dhundh rahe hain.
+      </div>
+<div style='background: #0b0e14; padding: 10px; border-radius: 10px; font-size: 12px; color: #ccc; border-left: 3px solid var(--gold);'>
+        &#9989; Jo <b>Private</b> solution chahte hain.
+      </div>
+<div style='background: #0b0e14; padding: 10px; border-radius: 10px; font-size: 12px; color: #ccc; border-left: 3px solid var(--gold);'>
+        &#9989; Jo <b>Long-term</b> result chahte hain.
+      </div>
+</div>
+</div>
+</section>
+<section style='padding: 20px; background: #0b0e14;'>
+<h2 style='text-align:center; color:var(--gold); font-size: 22px; margin-bottom: 10px;'>30 Din Ka Transformation</h2>
+<p style='text-align:center; color:#888; font-size: 13px; margin-bottom: 25px;'>E-Book ke baad aapke rishte mein ye badlav aayenge:</p>
+<div style='position: relative; padding-left: 30px; border-left: 2px dashed var(--gold); margin-left: 10px;'>
+<div style='margin-bottom: 30px; position: relative;'>
+<div style='position: absolute; left: -41px; top: 0; background: var(--gold); color: #000; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900;'>1</div>
+<h4 style='color: var(--gold); margin: 0 0 5px 0; font-size: 16px;'>Pehle 7 Din: Mindset Shift</h4>
+<p style='color: #ccc; font-size: 13px; margin: 0;'>Aapka purana darr aur performance anxiety khatam hone lagegi. Aap pehle se zyada <b>relax aur confident</b> mehsoos karenge.</p>
+</div>
+<div style='margin-bottom: 30px; position: relative;'>
+<div style='position: absolute; left: -41px; top: 0; background: var(--gold); color: #000; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900;'>2</div>
+<h4 style='color: var(--gold); margin: 0 0 5px 0; font-size: 16px;'>15 Din Baad: Physical Boost</h4>
+<p style='color: #ccc; font-size: 13px; margin: 0;'>Natural diet aur exercises se aapka <b>stamina aur energy levels</b> 2X badh jayenge. Partner aapka naya roop dekh kar hairan reh jayega.</p>
+</div>
+<div style='margin-bottom: 10px; position: relative;'>
+<div style='position: absolute; left: -41px; top: 0; background: #22c55e; color: #fff; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900;'>3</div>
+<h4 style='color: #22c55e; margin: 0 0 5px 0; font-size: 16px;'>30 Din Baad: The Pro Version</h4>
+<p style='color: #eee; font-size: 13px; margin: 0;'>Ab aapko kisi tips ki zaroorat nahi hogi. Aapke rishte mein wahi <b>"Pehli Raat"</b> wala excitement hamesha ke liye wapas aa jayega.</p>
+</div>
+</div>
+<div style='margin-top: 30px; background: linear-gradient(135deg, #161b22, #0b0e14); padding: 20px; border-radius: 15px; border: 1px solid var(--gold); text-align: center;'>
+<p style='color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 5px;'>Aaj se 1 mahine baad...</p>
+<p style='color: var(--gold); font-size: 14px; margin: 0;'>Kya aap wahi sharminda insaan bane rehna chahte hain, ya ek naya <b>Alpha Version</b> banna chahte hain?</p>
+</div>
+</section><section style='padding: 20px; background: #0b0e14;'>
+<div style='background: linear-gradient(145deg, #1c2128, #0b0e14); border: 2px solid #f5c542; border-radius: 30px; padding: 30px 20px; text-align: center; box-shadow: 0 10px 40px rgba(245, 197, 66, 0.15); max-width: 600px; margin: 0 auto;'>
+<div style='background: rgba(255, 71, 87, 0.15); border: 1.5px solid #ff4757; padding: 15px; border-radius: 20px; margin-bottom: 25px;'>
+<p style='color: #ff4757; font-size: 11px; font-weight: 800; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;'>&#9888;&#65039; Offer Khatam Hone Mein:</p>
+<div id='card-countdown-sync' style='color: #ffffff !important; font-size: 32px; font-weight: 900; letter-spacing: 2px; line-height: 1;'>12:00:00</div>
+</div>
+<h2 style='color: #fff; font-size: 22px; margin-bottom: 15px; font-weight: 800;'>Kahan Kharch Karenge Aap Ye &#8377;299?</h2>
+<div style='text-align: left; background: rgba(255,255,255,0.03); border-radius: 20px; padding: 20px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.05);'>
+<p style='color: #ff4757; font-size: 14px; font-weight: 800; margin-bottom: 12px;'>Yahan Paisa Barbaad Hota Hai:</p>
+<ul style='list-style: none; padding: 0; margin: 0; color: #888; font-size: 13px; line-height: 2;'>
+<li>&#10060; Ek baar ka Unhealthy <b>Pizza/Burger</b></li>
+<li>&#10060; Ek packet <b>Cigarette</b> jo sehat bigade</li>
+<li>&#10060; Ek <b>Movie Ticket</b> jo 3 ghante mein khatam</li>
+<li>&#10060; Fuzool ki <b>Mobile Games</b> ya Skins</li>
+</ul>
+<div style='margin: 15px 0; border-top: 1px dashed #444;'></div>
+<p style='color: #22c55e; font-size: 14px; font-weight: 800; margin-bottom: 12px;'>JoshShakti E-Book Se Kya Milega:</p>
+<ul style='list-style: none; padding: 0; margin: 0; color: #eee; font-size: 13px; line-height: 2;'>
+<li>&#9989; <b>Life-Time</b> tak rehne wala Confidence</li>
+<li>&#9989; Partner ki aankhon mein <b>Asli Izzat</b></li>
+<li>&#9989; Bina kisi side-effect ka <b>Natural Stamina</b></li>
+<li>&#9989; Ek <b>Khush-haal</b> Married Life ka raaz</li>
+</ul>
+</div>
+<div style='margin-bottom: 20px;'>
+<span style='color: #f5c542; font-size: 52px; font-weight: 900;'>&#8377;299</span>
+<p style='color: #ccc; font-size: 13px; margin-top: -5px;'>Sirf itni si investment ek nayi life ke liye!</p>
+</div>
+<a href='https://payments.cashfree.com/forms/JoshShakti' style='display: block; background: #f5c542; color: #000; text-decoration: none; padding: 20px; border-radius: 15px; font-weight: 900; font-size: 18px; box-shadow: 0 5px 20px rgba(245, 197, 66, 0.4); text-transform: uppercase;'>
+      YES! म&#2376;&#2306; अपन&#2366; र&#2367;श&#2381;त&#2366; बच&#2366;न&#2366; च&#2366;हत&#2366; ह&#2370;&#2305;
+    </a>
+<div style='margin-top: 25px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;'>
+<div style='font-size: 10px; color: #777; border: 1px solid #333; padding: 6px 12px; border-radius: 8px;'>🔒 SSL SECURE</div>
+<div style='font-size: 10px; color: #777; border: 1px solid #333; padding: 6px 12px; border-radius: 8px;'>💳 UPI/CARD</div>
+<div style='font-size: 10px; color: #777; border: 1px solid #333; padding: 6px 12px; border-radius: 8px;'>&#9889; INSTANT ACCESS</div>
+</div>
+</div>
+</section>
 <script>
+//<![CDATA[
+(function() {
+    // 1. Purane timers ko saaf karna
+    if (window.sparkmateSyncLoop) { clearInterval(window.sparkmateSyncLoop); }
 
-let time = 3;
+    function startFinalSync(hours) {
+        const timerId = 'sparkmate_ultimate_sync';
+        const headerEl = document.getElementById('header-countdown-sync'); 
+        const cardEl = document.getElementById('card-countdown-sync');
+        
+        let endTime = localStorage.getItem(timerId);
 
-const timer = document.getElementById("timer");
-const progress = document.getElementById("progress");
+        // Agar pehli baar hai toh 12 ghante set karo
+        if (!endTime) {
+            endTime = new Date().getTime() + (hours * 3600 * 1000);
+            localStorage.setItem(timerId, endTime);
+        }
 
-const interval = setInterval(()=>{
+        window.sparkmateSyncLoop = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = endTime - now;
 
-time--;
+            // Jab time khatam ho jaye toh reset
+            if (distance < 0) {
+                const newEndTime = new Date().getTime() + (hours * 3600 * 1000);
+                localStorage.setItem(timerId, newEndTime);
+                endTime = newEndTime;
+                return;
+            }
 
-timer.innerHTML = time;
+            let h = Math.floor((distance / (1000 * 60 * 60)) % 24);
+            let m = Math.floor((distance / 1000 / 60) % 60);
+            let s = Math.floor((distance / 1000) % 60);
 
-progress.style.width = ((5-time)*20)+"%";
+            const timeStr = 
+                (h < 10 ? "0" + h : h) + ":" + 
+                (m < 10 ? "0" + m : m) + ":" + 
+                (s < 10 ? "0" + s : s);
 
-if(time<=0){
+            // Dono jagah ek sath update
+            if (headerEl) { headerEl.textContent = timeStr; }
+            if (cardEl) { cardEl.textContent = timeStr; }
+        }, 1000);
+    }
 
-clearInterval(interval);
+    startFinalSync(12); // Yahan se hours control hote hain
+})();
+//]]>
+</script>
+<section class='sm-reviews' style='padding: 20px; background: #0b0e14;'>
+<h2 style='text-align:center; color:var(--gold); font-size: 22px; margin-bottom: 25px;'>Kya Kehte Hain Hamare 12,000+ Happy Couples?</h2>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #f5c542; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: 900;'>RK</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Rahul Kapoor <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Bhai sach bolu toh shuru mein laga tha pata nahi kya hoga, par is bundle ne meri married life badal di. Woh purana excitement wapas aa gaya hai. 299 mein itna value milna namumkin hai. <strong>MUST BUY</strong> agar aapka rishta thoda boring ho raha hai toh!"</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #ff4757; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>AS</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Anjali S. <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Maine apne husband ko surprise dene ke liye ye bundle liya tha. Ideas itne unique aur classy hain ki hum dono phir se ek dusre ke pyaar mein pad gaye. Privacy ka bhi poora dhyan rakha gaya hai, billing mein kuch ajeeb nahi aaya. Thank you JoshShakti!"</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #2f3542; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>VP</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Vikram Pratap <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"90% OFF dekh kar maine turant le liya aur trust me, ye meri best investment hai. Video masterclass toh kamaal ki hai. Agar aap apne partner ko khush rakhna chahte ho toh aankh band karke le lo."</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #1e90ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>MS</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Manish Sharma <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Sabse achi baat ye hai ki payment hote hi link mil gaya. Maine raat ko hi padhna shuru kiya aur mindset wala part toh mind-blowing hai. Privacy 100% hai, kisi ko pata bhi nahi chala maine ye liya hai. <strong>Highly Recommended!</strong>"</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #ffa502; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: 900;'>AJ</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Amit Jain <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Shaadi ke 8 saal baad life thodi thandi ho gayi thi, par is ebook ke ideas ne magic kar diya. Ab hum dono pehle se zyada close hain. Paisa vasool hai bhai, ek bar try zaroor karo."</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #2ed573; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>SK</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Sandeep Kumar <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Mujhe laga tha ye sab bakwas hota hai, par exercises aur diet plan sach mein kaam karte hain. Mera confidence ek dam zero ho chuka tha, ab main pehle jaisa mardana feel karta hoon. Sharam chodo aur ye lo."</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #747d8c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>RV</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Rahul Verma <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Main doctor ke chakkar laga kar thak gaya tha, hazaro rupaye barbaad kiye. Par ye 299 ki ebook ne jo knowledge di wo kahin nahi mili. <strong>Life-saving product!</strong>"</p>
+</div>
+<div style='background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #333;'>
+<div style='display: flex; align-items: center; gap: 10px; margin-bottom: 10px;'>
+<div style='width: 40px; height: 40px; background: #ff6b81; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900;'>NK</div>
+<div>
+<div style='font-weight: 800; font-size: 14px;'>Nitin K. <span style='color: #22c55e; font-size: 10px; margin-left: 5px;'>&#10004; Verified Buyer</span></div>
+<div style='color: #f5c542; font-size: 12px;'>&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+</div>
+</div>
+<p style='font-size: 13px; color: #ccc; font-style: italic;'>"Ab mujhe dar nahi lagta. Meri wife ab mujhse bahut khush rehti hai aur hamare beech ka jhade bhi khatam ho gaye hain. <strong>Must buy for every man.</strong>"</p>
+</div>
+</section><section style='padding: 30px 20px; background: #0b0e14;'>
+<h3 style='color: var(--gold); font-size: 24px; margin-bottom: 30px; text-align: center; font-weight: 800;'>Sawaal Jo Aap Puchna Chahte Hain</h3>
+<style>
+    .faq-container { max-width: 600px; margin: 0 auto; }
+    
+    details {
+      /* iPhone Glass Effect */
+      background: rgba(255, 255, 255, 0.05); 
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-window.location.href="https://us.thebhulekh.com/?go=19cf18f1";
+    /* Jab khulega tab thoda aur glow karega */
+    details[open] {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(245, 197, 66, 0.4);
+    }
 
-}
+    summary {
+      padding: 20px;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
 
-},3000);
+    /* Custom Arrow (Pure CSS, no codes) */
+    summary::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      margin-right: 5px;
+    }
 
-// Redirect after 3 sec
-setTimeout(()=>{
-  window.location.href="https://us.thebhulekh.com/?go=19cf18f1";
+    details[open] summary::after {
+      transform: rotate(-135deg);
+    }
 
-},2000);
+    /* Remove default blogger arrow */
+    summary::-webkit-details-marker { display: none; }
 
+    .faq-content {
+      padding: 0 20px 20px 20px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 15px;
+    }
+  </style>
+<div class='faq-container'>
+<details>
+<summary>Kya mere bank statement ya ghar par kisi ko pata chalega?</summary>
+<div class='faq-content'>
+        Bilkul nahi. Payment secure aur private hoti hai. Yeh ek Digital E-book hai, isliye aapke ghar par koi physical package nahi aayega. <b>Aapka raaz hamare paas mehfooz hai.</b>
+</div>
+</details>
+<details>
+<summary>Meri umar 40+ hai, kya ye asardaar hai?</summary>
+<div class='faq-content'>
+        Haan! Hamari techniques natural diet aur exercises par based hain jo har umar ke mard par asar karti hain. Confidence ki koi expiry date nahi hoti.
+      </div>
+</details>
+<details>
+<summary>Payment ke baad book kaise milegi?</summary>
+<div class='faq-content'>
+        Payment hote hi aapko screen par <b>Download Button</b> mil jayega. Saath hi aapke email par bhi ek copy bhej di jayegi.
+      </div>
+</details>
+<details>
+<summary>Kya mujhe koi dawai khani hogi?</summary>
+<div class='faq-content'>
+        Nahi! Yeh e-book poori tarah se natural techniques aur mindset par based hai. Hum koi bhi harmful pills ya chemicals suggest nahi karte.
+      </div>
+</details>
+</div>
+</section>
+<div class='sm-sticky-footer'>
+<div style='font-weight: 800; font-size: 20px; color: var(--gold);'>
+<s style='font-size: 14px; color: #666; font-weight: 400;'>&#8377;2,499</s> &#8377;299
+            </div>
+<a href='https://payments.cashfree.com/forms/JoshShakti' style='background: var(--gold); color: #000; padding: 10px 20px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 14px;'>UNLOCK NOW- JUST IN &#8377;299/-</a>
+</div>
+</div>
+<script type='text/javascript'>
+          //<![CDATA[
+          function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+              hours = parseInt(timer / 3600, 10);
+              minutes = parseInt((timer % 3600) / 60, 10);
+              seconds = parseInt(timer % 60, 10);
+              hours = hours < 10 ? "0" + hours : hours;
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
+              display.textContent = hours + ":" + minutes + ":" + seconds;
+              if (--timer < 0) {
+                timer = duration;
+                localStorage.setItem('sm_timer_start', Date.now());
+              }
+              localStorage.setItem('sm_timer_remaining', timer);
+            }, 1000);
+          }
+          window.onload = function () {
+            var twelveHours = 12 * 60 * 60;
+            var savedTime = localStorage.getItem('sm_timer_remaining');
+            var startTime = localStorage.getItem('sm_timer_start');
+            var display = document.querySelector('#countdown');
+            if (savedTime && startTime) {
+              var passed = Math.floor((Date.now() - startTime) / 1000);
+              var remaining = twelveHours - passed;
+              if (remaining <= 0) {
+                localStorage.setItem('sm_timer_start', Date.now());
+                startTimer(twelveHours, display);
+              } else {
+                startTimer(remaining, display);
+              }
+            } else {
+              localStorage.setItem('sm_timer_start', Date.now());
+              startTimer(twelveHours, display);
+            }
+          };
+          //]]>
+        </script>
+</div></div>
+<script>
+  // Saare main blocks ko dhund kar animation dena
+  document.querySelectorAll('section, .sm-offer-card, .sm-reviews > div, details, .coach-box').forEach((el, index) => {
+    el.setAttribute('data-aos', 'fade-up');
+    el.setAttribute('data-aos-delay', (index % 5) * 100); 
+  });
+
+  // Animation Start
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120,
+    easing: 'ease-out-back'
+  });
 </script>
 
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/344097953-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AAVkm1tgblJScxpMz7jnIfq9gG5D:1777675902625';_WidgetManager._Init('//draft.blogger.com/rearrange?blogID\x3d751699251939084022','//sparkmate-book.blogspot.com/','751699251939084022');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '751699251939084022', 'title': 'E-Book seller', 'url': 'https://sparkmate-book.blogspot.com/', 'canonicalUrl': 'https://sparkmate-book.blogspot.com/', 'homepageUrl': 'https://sparkmate-book.blogspot.com/', 'searchUrl': 'https://sparkmate-book.blogspot.com/search', 'canonicalHomepageUrl': 'https://sparkmate-book.blogspot.com/', 'blogspotFaviconUrl': 'https://sparkmate-book.blogspot.com/favicon.ico', 'bloggerUrl': 'https://draft.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22E-Book seller - Atom\x22 href\x3d\x22https://sparkmate-book.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22E-Book seller - RSS\x22 href\x3d\x22https://sparkmate-book.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22E-Book seller - Atom\x22 href\x3d\x22https://draft.blogger.com/feeds/751699251939084022/posts/default\x22 /\x3e\n', 'meTag': '\x3clink rel\x3d\x22me\x22 href\x3d\x22https://draft.blogger.com/profile/16973971738511665672\x22 /\x3e\n', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/84001711b9876716', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Share to X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'E-Book seller'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'E-Book seller', 'description': '', 'url': 'https://sparkmate-book.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}]);
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'navMessage': 'No posts.', 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1053750561-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
 </body>
 </html>
